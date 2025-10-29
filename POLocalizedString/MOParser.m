@@ -119,7 +119,7 @@ typedef struct _mo_position {
 		}
 		
 		// allocate or reallocate string buffer if necessary
-		newbufsize = MAX(256, MAX(translations[i].length, originals[i].length));
+		newbufsize = MAX(256, MAX(translations[i].length, originals[i].length)) + 1;
 		if(bufsize < newbufsize) {
             
 			bufsize = newbufsize;
